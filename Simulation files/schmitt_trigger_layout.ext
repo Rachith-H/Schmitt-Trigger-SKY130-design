@@ -1,0 +1,40 @@
+timestamp 1752906801
+version 8.3
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "a_0_n55#" 268 1880 0 -55 ndiff 60 54 0 0 0 0 0 0 0 0 0 0 88 52 0 0 0 0
+node "a_0_n39#" 529 10632 0 -39 ndiff 60 54 0 0 52 52 0 0 0 0 0 0 172 94 0 0 0 0
+node "vout" 797 22092 -2 -8 pdiff 20 18 40 26 120 120 0 0 0 0 0 0 292 154 0 0 0 0
+node "gnd" 1767 18656 -4 -70 ppc 20 18 176 148 0 0 0 0 0 0 0 0 488 260 268 142 0 0
+node "a_n2_n1#" 927 9706 -2 -1 pdiff 0 0 120 78 58 58 0 0 0 0 0 0 200 108 0 0 0 0
+node "a_n2_15#" 630 0 -2 15 pdiff 0 0 120 78 0 0 0 0 0 0 0 0 96 56 0 0 0 0
+node "vin" 1456 36692 -10 -57 pc 0 0 0 0 252 252 0 0 0 0 0 0 400 208 0 0 0 0
+node "vref" 1004 16940 -4 42 nnc 152 148 40 26 0 0 0 0 0 0 0 0 412 222 384 200 0 0
+node "w_37_0#" 2923 0 37 0 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 168 52
+node "w_n4_n10#" 13573 0 -4 -10 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 780 154
+cap "vref" "a_n2_n1#" 720
+cap "vout" "gnd" 720
+cap "w_n4_n10#" "a_n2_n1#" 1816
+cap "w_n4_n10#" "a_n2_15#" 2256
+cap "w_n4_n10#" "vin" 936
+cap "w_n4_n10#" "vref" 376
+cap "w_37_0#" "vout" 312
+cap "vout" "vref" 720
+cap "a_0_n39#" "vref" 720
+cap "w_n4_n10#" "vout" 376
+cap "w_37_0#" "gnd" 752
+cap "vref" "gnd" 720
+cap "w_37_0#" "a_n2_n1#" 188
+cap "w_n4_n10#" "gnd" 188
+device mosfet nfet 0 -57 1 -56 2 4 "Gnd!" "vin" 4 0 "gnd" 4 20,18 "a_0_n55#" 4 20,18
+device mosfet nfet 15 -50 16 -49 2 4 "Gnd!" "a_0_n39#" 4 0 "a_0_n55#" 4 20,18 "vref" 4 20,18
+device mosfet nfet 0 -41 1 -40 2 4 "Gnd!" "vin" 4 0 "a_0_n55#" 4 20,18 "a_0_n39#" 4 20,18
+device mosfet nfet 36 -34 37 -33 2 4 "Gnd!" "vout" 4 0 "a_0_n39#" 4 20,18 "vref" 4 20,18
+device mosfet nfet 0 -25 1 -24 2 4 "Gnd!" "vin" 4 0 "a_0_n39#" 4 20,18 "vout" 4 20,18
+device mosfet pfet -2 -3 -1 -2 2 8 "w_n4_n10#" "vin" 4 0 "vout" 8 40,26 "a_n2_n1#" 8 40,26
+device mosfet pfet 43 2 44 3 2 8 "w_37_0#" "vout" 4 0 "a_n2_n1#" 8 40,26 "gnd" 8 40,26
+device mosfet pfet -2 13 -1 14 2 8 "w_n4_n10#" "vin" 4 0 "a_n2_n1#" 8 40,26 "a_n2_15#" 8 40,26
+device mosfet pfet 15 19 16 20 2 8 "w_n4_n10#" "a_n2_n1#" 4 0 "a_n2_15#" 8 40,26 "gnd" 8 40,26
+device mosfet pfet -2 31 -1 32 2 8 "w_n4_n10#" "vin" 4 0 "a_n2_15#" 8 40,26 "vref" 8 40,26

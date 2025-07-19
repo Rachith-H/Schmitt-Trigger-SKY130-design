@@ -1,0 +1,45 @@
+* SPICE3 file created from schmitt_trigger.ext
+.lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.option scale=1u
+
+XM0 vout vin a_0_n39# Gnd sky130_fd_pr__nfet_01v8 w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+XM1 a_0_n39# vin a_0_n55# Gnd sky130_fd_pr__nfet_01v8 w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+XM2 vref vout a_0_n39# Gnd sky130_fd_pr__nfet_01v8 w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+XM3 gnd a_n2_n1# a_n2_15# w_n4_n10# sky130_fd_pr__pfet_01v8 w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+XM4 vref a_0_n39# a_0_n55# Gnd sky130_fd_pr__nfet_01v8 w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+XM5 vref vin a_n2_15# w_n4_n10# sky130_fd_pr__pfet_01v8 w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+XM6 a_n2_n1# vin vout w_n4_n10# sky130_fd_pr__pfet_01v8 w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+XM7 a_0_n55# vin gnd Gnd sky130_fd_pr__nfet_01v8 w=4 l=2
++  ad=20p pd=18u as=20p ps=18u
+XM8 a_n2_15# vin a_n2_n1# w_n4_n10# sky130_fd_pr__pfet_01v8 w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+XM9 gnd vout a_n2_n1# w_37_0# sky130_fd_pr__pfet_01v8 w=8 l=2
++  ad=40p pd=26u as=40p ps=26u
+C0 w_n4_n10# a_n2_15# 2.256f
+C1 a_0_n39# 0 10.632f 
+C2 vout 0 22.092f 
+C3 gnd 0 18.656f 
+C4 a_n2_n1# 0 9.706f 
+C5 vin 0 36.692f 
+C6 vref 0 16.94f 
+
+V1 vref gnd 5
+V2 vin gnd SIN(0 5 50 0 0 0)
+
+.tran 0.1m 100m
+.control
+run 
+plot v(vin) v(vout)
+.endc
+.end
+
+
+
+
