@@ -1,17 +1,17 @@
-# Schmitt Trigger using Sky130 PDK
-This repository contains the complete design, simulation, and analysis of a CMOS Schmitt Trigger using the Sky130 PDK. It includes all necessary files—schematic, netlist, simulation scripts, layout (in SCMOS), and waveform snapshots—organized for easy understanding and replication.  
+# Inverting Schmitt Trigger using Sky130 PDK
+This repository contains the complete design, simulation, and analysis of a Inverting Schmitt Trigger using the Sky130 PDK. It includes all necessary files—schematic, netlist, simulation scripts, layout (in SCMOS), and waveform snapshots—organized for easy understanding and replication.  
 
 
 ## Introduction 
-A Schmitt Trigger is a comparator circuit with hysteresis, commonly used to convert noisy or analog input signals into clean digital outputs. Unlike a simple inverter, it introduces two distinct threshold voltages , one for rising input and another for falling, thereby improving noise immunity and ensuring stable transitions.
+This project demonstrates the design and simulation of an inverting CMOS Schmitt Trigger using the Sky130 open-source PDK. The circuit introduces hysteresis by switching its output only when the input crosses distinct high and low thresholds, while also inverting the logic.
 
-This project presents a CMOS-based Schmitt Trigger designed using the Sky130 open-source PDK. The circuit is implemented in Xschem, simulated using ngspice, and the layout is prototyped in Magic using SCMOS layers for simplicity and learning purposes.
+Designed in Xschem and simulated with Ngspice, the output transitions from HIGH to LOW at around 66.66% and from LOW to HIGH at around 33.33% of the input sine wave though not precisely at those ideal values. The layout was implemented in Magic using SCMOS layers for simplicity and learning purposes.
 
-When fed with a sine wave input, the output of this design toggles approximately at 33.33% and 66.66% of the input amplitude, demonstrating hysteresis behavior, though not precisely at those ideal values.  
+The netlist extracted from the SCMOS layout was manually modified to be compatible with Sky130 PDK models, enabling accurate simulation of the layout using Sky130 device definitions.
 
-This project is carried out purely for learning purposes — to understand analog design flow, hysteresis principles, and basic layout techniques using open-source tools. It is not optimized for silicon fabrication or production use.  
+This project is carried out purely for learning purposes, to explore analog design flow, hysteresis behavior, and basic layout-to-simulation integration using open-source tools. It is not optimized for fabrication or production use.
 
-This repository includes all relevant design files, simulations, waveforms, and layout snapshots to help understand and replicate the Schmitt Trigger behavior using the Sky130 PDK and open-source tools.  
+All essential design files, simulation results, and layout snapshots are included for educational reference and reuse.  
 
 ## Tools used  
 1. Xschem – Schematic design with SKY130 models
