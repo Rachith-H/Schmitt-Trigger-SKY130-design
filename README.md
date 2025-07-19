@@ -4,15 +4,12 @@ This repository contains the complete design, simulation, and analysis of a Inve
 ![Xschem_schematic](Images/symbol.png)  
 
 ## Introduction 
-This project demonstrates the design and simulation of an inverting CMOS Schmitt Trigger using the Sky130 open-source PDK. The circuit introduces hysteresis by switching its output only when the input crosses distinct high and low thresholds, while also inverting the logic.
+This project presents the design and simulation of an inverting CMOS Schmitt Trigger using the Sky130 PDK. The circuit introduces hysteresis and inverts logic, with output transitions near 66.66% and 33.33% of the input sine wave, though not precisely at those ideal values.
 
-Designed in Xschem and simulated with Ngspice, the output transitions from HIGH to LOW at around 66.66% and from LOW to HIGH at around 33.33% of the input sine wave though not precisely at those ideal values. The layout was implemented in Magic using SCMOS layers for simplicity and learning purposes.
+The schematic was built in Xschem, simulated with Ngspice, and a basic layout was created in Magic using SCMOS layers. The extracted layout netlist was manually updated to use Sky130 devices and simulate correctly with Sky130 models.
 
-The netlist extracted from the SCMOS layout was manually modified to be compatible with Sky130 PDK models, enabling accurate simulation of the layout using Sky130 device definitions.
+Created for learning purposes, this project explores analog design, hysteresis behavior, and layout-to-simulation using open-source tools. All key files and results are included for educational reference.
 
-This project is carried out purely for learning purposes, to explore analog design flow, hysteresis behavior, and basic layout-to-simulation integration using open-source tools. It is not optimized for fabrication or production use.
-
-All essential design files, simulation results, and layout snapshots are included for educational reference and reuse.  
 
 ## Tools used  
 1. Xschem – Schematic design with SKY130 models
