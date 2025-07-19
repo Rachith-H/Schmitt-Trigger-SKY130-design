@@ -1,6 +1,7 @@
 # Inverting Schmitt Trigger using Sky130 PDK
-This repository contains the complete design, simulation, and analysis of a Inverting Schmitt Trigger using the Sky130 PDK. It includes all necessary files—schematic, netlist, simulation scripts, layout (in SCMOS), and waveform snapshots—organized for easy understanding and replication.  
+This repository contains the complete design, simulation, and analysis of a Inverting Schmitt Trigger using the Sky130 PDK. It includes all necessary files—schematic, netlist, simulation scripts, layout (in SCMOS), and waveform snapshots—organized for easy understanding and replication.    
 
+![Xschem_schematic](Images/symbol.png)  
 
 ## Introduction 
 This project demonstrates the design and simulation of an inverting CMOS Schmitt Trigger using the Sky130 open-source PDK. The circuit introduces hysteresis by switching its output only when the input crosses distinct high and low thresholds, while also inverting the logic.
